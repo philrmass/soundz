@@ -1,0 +1,19 @@
+{
+  "name": "soundz",
+  "version": "0.0.0",
+  "description": "Playing with Web Audio API",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philrmass/soundz.git"
+  },
+  "author": "Phil Mass",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/philrmass/soundz/issues"
+  },
+  "homepage": "https://github.com/philrmass/soundz#readme"
+}
