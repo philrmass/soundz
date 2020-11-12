@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/philrmass/soundz/issues"
   },
-  "homepage": "https://github.com/philrmass/soundz#readme"
+  "homepage": "https://github.com/philrmass/soundz#readme",
+  "dependencies": {
+    "htm": "^3.0.4",
+    "preact": "^10.5.5",
+    "servor": "^4.0.2"
+  }
 }
