@@ -1,5 +1,16 @@
+import { render } from '../node_modules/preact/dist/preact.module.js';
+import { html } from '../node_modules/htm/preact/standalone.module.js';
+//import { html, render } from 'https://unpkg.com/htm/preact/index.mjs?module'
+
+console.log('SCRIPT1 and @@@ nada @@@');
+
+function App (props) {
+  return html`<h1>Hello ${props.name}!</h1>`;
+}
 
 function onLoad() {
+  console.log('LOAD');
+
   const video = document.getElementById('video');
   const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
@@ -61,7 +72,9 @@ function onLoad() {
     video.src = file; 
     video.play();
   };
+
+  render(html`<${App} name="Worldz" />`, document.body);
 }
 
+console.log('INDEX');
 document.addEventListener("DOMContentLoaded", onLoad);
-
