@@ -4,6 +4,7 @@
   "description": "Playing with Web Audio API",
   "main": "index.js",
   "scripts": {
+    "start": "servor . index.html --reload",
     "test": "jest"
   },
   "repository": {

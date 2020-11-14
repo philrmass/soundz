@@ -1,5 +1,4 @@
 # Soundz Tasks
-- add servor script
 - move code into src
 - add App component
 - add Input component
