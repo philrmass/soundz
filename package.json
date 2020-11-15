@@ -4,6 +4,7 @@
   "description": "Playing with Web Audio API",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint src/** src/**/**",
     "start": "servor . index.html --reload",
     "test": "jest"
   },
@@ -21,5 +22,8 @@
     "htm": "^3.0.4",
     "preact": "^10.5.5",
     "servor": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0"
   }
 }
