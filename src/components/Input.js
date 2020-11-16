@@ -5,7 +5,7 @@ const html = htm.bind(h);
 
 function Input() {
   return html`
-    <section>
+    <section class='input'>
       INPUT
     </section>
   `;

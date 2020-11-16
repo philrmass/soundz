@@ -10,6 +10,9 @@ function App() {
     <main>
       <${Input}><//>
     </main>
+    <section>
+      OTHER
+    </section>
   `;
 }
 
