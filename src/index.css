@@ -1,8 +1,69 @@
 :root {
+  --size-0: 4px;
+  --size-1: 8px;
+  --size-2: 16px;
+  --bg-gray: #383838;
+  --bg-button: #f0f0f0;
+  --bg-hover: #ffffff;
+  --border-radius: 3px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: var(--size-1) var(--size-2);
+  border: 0;
+  font-family: inherit;
+}
+
+.main {
+  height: 100%;
+  display: flex;
 }
 
 .input {
-  color: orange;
-  font-weight: bold;
-  background: blue;
+  height: 100%;
+  padding: var(--size-2);
+  background: var(--bg-gray);
+}
+
+.input-controls {
+  padding-bottom: var(--size-1);
+}
+
+.input-controls-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--bg-button);
+}
+
+.input-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-button {
+  border: 0;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--size-1);
+  background: var(--bg-button);
+}
+
+.input-button:hover {
+  background: var(--bg-hover);
+}
+
+.display {
+  padding: var(--size-1);
 }

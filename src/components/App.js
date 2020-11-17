@@ -7,12 +7,12 @@ const html = htm.bind(h);
 
 function App() {
   return html`
-    <main>
+    <main class='main'>
       <${Input}><//>
+      <section class='display'>
+        DISPLAY
+      </section>
     </main>
-    <section>
-      OTHER
-    </section>
   `;
 }
 
