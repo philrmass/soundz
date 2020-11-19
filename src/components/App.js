@@ -10,7 +10,7 @@ function App() {
     <main class='main'>
       <${Input}><//>
       <section class='display'>
-        DISPLAY
+        <canvas width='256' height='128' id='canvas' />
       </section>
     </main>
   `;

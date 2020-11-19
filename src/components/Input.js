@@ -1,7 +1,7 @@
 import { h } from '../../node_modules/preact/dist/preact.module.js';
 import htm from '../../node_modules/htm/dist/htm.module.js';
 
-import { setAudio } from '../sources.js';
+import { setAudio } from '../utilities/sources.js';
 
 const html = htm.bind(h);
 
@@ -26,8 +26,8 @@ function Input() {
         <button class='input-button'>
           Video
         </button>
-        <audio id='audio' />
       </div>
+        <audio id='audio' controls />
     </section>
   `;
 }
