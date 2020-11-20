@@ -1,6 +1,8 @@
 # Soundz Tasks
-- render with animation frame
 - render with more resolution & better colors
+- render with animation frame
+- adjust sizing of graph
+- add scrolling freq graph
 - disentable input, audio pipeline, and visuals, use async
 - add Visualizer component to fill remainder
 - make 'html' import for components

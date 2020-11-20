@@ -9,8 +9,8 @@ function App() {
   return html`
     <main class='main'>
       <${Input}><//>
-      <section class='display'>
-        <canvas width='256' height='128' id='canvas' />
+      <section class='visual'>
+        <canvas id='canvas' />
       </section>
     </main>
   `;

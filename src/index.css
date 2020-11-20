@@ -64,6 +64,5 @@ button {
   background: var(--bg-hover);
 }
 
-.display {
-  padding: var(--size-1);
+.visual {
 }

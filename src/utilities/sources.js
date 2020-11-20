@@ -17,18 +17,21 @@ export function setAudio(id) {
 }
 
 function visual(elem) {
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
+  const width = 2048;
+  const height = 256;
 
-  ctx.fillStyle='#f80';
-  ctx.fillRect(0, 0, 512, 128);
+  const canvas = document.getElementById('canvas');
+  canvas.width = width;
+  canvas.height = height;
+
+  const ctx = canvas.getContext('2d');
 
   var actx = new AudioContext();
   var source = actx.createMediaElementSource(elem);
 
   var ana = actx.createAnalyser();
-  ana.fftSize = 32;
-  ana.minDecibels = -90;
+  ana.fftSize = 2048;
+  ana.minDecibels = -130;
   ana.maxDecibels = -10;
   source.connect(ana);
 
@@ -36,27 +39,30 @@ function visual(elem) {
 
   const len = ana.frequencyBinCount;
   const buf = new Uint8Array(len);
-  //const buf = new Float32Array(len);
+  const max = 256;
 
   setInterval(() => {
     ana.getByteFrequencyData(buf);
-    //ana.getFloatFrequencyData(buf);
+    drawGraph(ctx, buf, max, width, height);
+  }, 20);
+}
 
-    ctx.fillStyle='#ffc';
-    ctx.fillRect(0, 0, 512, 128);
+//??? adjust by size and data
+//??? improve colors
+//??? animation frame
+function drawGraph(ctx, buf, max, width, height) {
+  const sizeX = width / buf.length;
+  const sizeY = height / max;
 
-    ctx.fillStyle='#226';
+  ctx.fillStyle='#fff';
+  ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle='#444';
 
-    //??? calculate size
-    const size = 32;
+  for (let i = 0; i < buf.length; i++) {
+    const val = buf[i];
+    const x = sizeX * i;
+    const y = sizeY * val;
 
-    for (let i = 0; i < buf.length; i++) {
-      const val = buf[i];
-      const x = size * i;
-      const y = val / 2;
-
-      ctx.fillRect(x, 0, size, y);
-    }
-    ctx.stroke();
-  }, 10);
+    ctx.fillRect(x, height - y, sizeX, y);
+  }
 }
