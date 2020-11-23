@@ -23,11 +23,19 @@ function Input() {
         >
           Audio
         </button>
-        <button class='input-button'>
+        <button
+          class='input-button'
+          onClick=${() => setAudio('video')}
+        >
           Video
         </button>
       </div>
+      <div>
         <audio id='audio' controls />
+      </div>
+      <div>
+        <video id='video' width='500px' height='500px' loop controls />
+      </div>
     </section>
   `;
 }

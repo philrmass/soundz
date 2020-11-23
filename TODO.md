@@ -1,4 +1,7 @@
 # Soundz Tasks
+- make a visual0 function (analyzer, canvas)
+- make visual1 with Float
+
 - render with more resolution & better colors
 - render with animation frame
 - adjust sizing of graph
